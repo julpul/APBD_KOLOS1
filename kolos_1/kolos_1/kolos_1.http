@@ -4,3 +4,24 @@ GET {{kolos_1_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
+POST http://localhost:5000/api/appointments
+Content-Type: application/json
+
+{
+  "appointmentId": 10,
+  "patientId": 1,
+  "pwz": "PWZ5678",
+  "services": [
+    {
+      "serviceName": "Consultation",
+      "serviceFee": 110.00
+    },
+    {
+      "serviceName": "ECG",
+      "serviceFee": 70.00
+    }
+  ]
+}
+
+
+###
